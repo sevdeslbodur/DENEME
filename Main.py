@@ -66,6 +66,35 @@ try:
     hasta2 = Hasta("H-0002", "Ayşe", "Demir", "1994-11-15", "Migren", "Ağrı kesici", 0)
     hasta3 = Hasta("H-0003", "Fatma", "Kara", "1982-03-05", "Diyabet", "İnsülin", 0)
 
-  
+     # Başlangıç ve bitiş tarihlerini içeren bir liste oluşturma
+    tedavi_tarihleri = [
+        ("2024-05-01", "2024-05-08"),
+        ("2024-05-02", "2024-05-30"),
+        ("2024-05-03", "2024-06-14")
+    ]
+
+    # Tedavi Süreleri:
+    print("Tedavi Süreleri:")
+    for i, (baslangic, bitis) in enumerate(tedavi_tarihleri):
+        if i == 0:
+            hasta = hasta1
+        elif i == 1:
+            hasta = hasta2
+        else:
+            hasta = hasta3
+        tedavi_suresi = hasta.tedavi_suresi_hesapla(baslangic, bitis)
+        hasta.set_tedavi_suresi(tedavi_suresi)  # Tedavi süresini hasta nesnesine kaydet
+        print(f"Başlangıç Tarihi: {baslangic}, Bitiş Tarihi: {bitis}")
+        print(f"Hasta {i+1} Tedavi Süresi: {tedavi_suresi} gün")
+        print("-----------------------")
+
+    # Hasta Bilgilerini Yazdırma
+    print("Hasta Bilgileri:")
+    print(hasta1)
+    print(hasta2)
+    print(hasta3)
+    print("-----------------------")
+
+
       
           
