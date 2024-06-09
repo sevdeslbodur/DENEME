@@ -30,3 +30,13 @@ class Personel:
 
     def set_departman(self, departman):
         self.__departman = departman
+
+    def get_maas(self):
+        return self.__maas
+
+    def set_maas(self, maas):
+        self.__maas = maas
+        
+    
+    def _str_(self):
+        return f"Personel No: {self.get_personel_no()}, Ad: {self.get_ad()}, Soyad: {self.get_soyad()}, Departman: {self.get_departman()}, Maaş: {self.get_maas()}"
