@@ -14,6 +14,7 @@ try:
     print(personel2)
     print("-----------------------------------")
 
+
     # Doktor nesnelerini oluşturma ve yazdırma
     print("Doktor Bilgileri:")
     doktor1 = Doktor("1003", "Hakan", "Kaya", "Doktor", "Dahiliye", 8, 7500.00, "Şehir Hastanesi" )
@@ -23,9 +24,21 @@ try:
     print(doktor2)
     print(doktor3)
     print("-----------------------------------")
+              
+    # Doktor maaşlarını %10 artırma
+    doktor1.maas_arttir(10)  # %10 arttırmak için oran 10 olarak geçilir
+    doktor2.maas_arttir(10)
+    doktor3.maas_arttir(10)
+    
+    # Güncellenmiş doktor maaşlarını yazdırma
+    print("Güncellenmiş Doktor Maaşları:")
+    print(doktor1)
+    print(doktor2)
+    print(doktor3)
+    print("-----------------------------------")
+
           
-          
-      # Hemşire nesnelerini oluşturma ve yazdırma
+    # Hemşire nesnelerini oluşturma ve yazdırma
     print("Hemşire Bilgileri:")
     hemsire1 = Hemsire("1006", "Rüzgar", "Gül", "Pediatri", 4500.00, 36, "A Sertifikası", "Eğitim Hastanesi")
     hemsire2 = Hemsire("1007", "Mehmet", "Can", "Diyaliz", 4000.00, 28, "B Sertifikası", "Özel Hastane")
@@ -35,7 +48,19 @@ try:
     print(hemsire3)
     print("-----------------------------------")
     
-          
+     # Hemşire maaşlarını %10 artırma
+    hemsire1.maas_arttir(10)  # %10 arttırmak için oran 10 olarak geçilir
+    hemsire2.maas_arttir(10)
+    hemsire3.maas_arttir(10)
+
+    # Güncellenmiş hemşire maaşlarını yazdırma
+    print("Güncellenmiş Hemşire Maaşları:")
+    print(hemsire1)
+    print(hemsire2)
+    print(hemsire3)
+    print("-----------------------------------")
+
+      
     # Hasta nesnelerini oluşturma
     hasta1 = Hasta("H-0001", "Ümmü", "Özdemir", "1979-04-20", "Grip", "Antibiyotik", 0)
     hasta2 = Hasta("H-0002", "Ayşe", "Demir", "1994-11-15", "Migren", "Ağrı kesici", 0)
