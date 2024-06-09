@@ -152,4 +152,36 @@ try:
     
     # Boş olan değişken değerlerine 0 atama
     df.fillna(0, inplace=True)
-      
+
+
+     # Doktorları uzmanlık alanlarına göre gruplandırarak toplam sayısını hesaplama ve yazdırma
+    doktor_uzmanlik_gruplari = df[df['uzmanlik'] != 0].groupby('uzmanlik').size()
+    print("Doktor Uzmanlık Grupları ve Sayıları:")
+    print(doktor_uzmanlik_gruplari)
+    print("-----------------------------------")
+
+    # 5 yıldan fazla deneyime sahip doktorların toplam sayısını bulma
+    deneyimli_doktorlar = df[(df['deneyim_yili'] > 5) & (df['deneyim_yili'] != 0)].shape[0]
+    print("5 yıldan fazla deneyime sahip doktorların sayısı:", deneyimli_doktorlar)
+    print("-----------------------------------")
+
+    # Hasta adına göre DataFrame’i alfabetik olarak sıralama ve yazdırma
+    df_hasta_sirali = df[df['hasta_no'] != 0].sort_values(by='ad')
+    print("Alfabetik Sıralanmış Hasta Bilgileri:")
+    print(df_hasta_sirali)
+    print("-----------------------------------")
+    
+    # Maaşı 7000 TL üzerinde olan personelleri bulup ve yazdırın
+    maas_7000_uzeri = df[df['maas'] > 7000]
+    print("Maaşı 7000 TL üzerinde olan personeller:")
+    print(maas_7000_uzeri)
+    print("-----------------------------------")
+    
+    # Doğum tarihi 1990 ve sonrası olan hastaları gösterme
+    df['dogum_tarihi'] = pd.to_datetime(df['dogum_tarihi'], errors='coerce')  # Hatalı tarihleri NaT yapar
+    df_dogum_tarihi_1990_sonrasi = df[(df['dogum_tarihi'] >= '1990-01-01') & (df['dogum_tarihi'].notna())]
+    print("Doğum Tarihi 1990 ve Sonrası Olan Hastalar:")
+    print(df_dogum_tarihi_1990_sonrasi)
+    print("-----------------------------------")
+
+  
