@@ -96,5 +96,43 @@ try:
     print("-----------------------")
 
 
+
+      # Tüm nesnelerden DataFrame oluşturma
+    data = {
+        "nesne": ["personel1", "personel2", "doktor1", "doktor2", "doktor3", "hemsire1", "hemsire2", "hemsire3", "hasta1", "hasta2", "hasta3"],
+
+        "personel_no": [personel1.get_personel_no(), personel2.get_personel_no(), doktor1.get_personel_no(), doktor2.get_personel_no(), doktor3.get_personel_no(), hemsire1.get_personel_no(), hemsire2.get_personel_no(), hemsire3.get_personel_no(), 0, 0, 0],
+        
+        "ad": [personel1.get_ad(), personel2.get_ad(), doktor1.get_ad(), doktor2.get_ad(), doktor3.get_ad(), hemsire1.get_ad(), hemsire2.get_ad(), hemsire3.get_ad(), hasta1.get_ad(), hasta2.get_ad(), hasta3.get_ad()],
+        
+        "soyad": [personel1.get_soyad(), personel2.get_soyad(), doktor1.get_soyad(), doktor2.get_soyad(), doktor3.get_soyad(), hemsire1.get_soyad(), hemsire2.get_soyad(), hemsire3.get_soyad(), hasta1.get_soyad(), hasta2.get_soyad(), hasta3.get_soyad()],
+        
+        "departman": [personel1.get_departman(), personel2.get_departman() , doktor1.get_departman(), doktor2.get_departman(), doktor3.get_departman(), hemsire1.get_departman(), hemsire2.get_departman(), hemsire3.get_departman(), 0, 0, 0],
+        
+        "maas": [personel1.get_maas(), personel2.get_maas(), doktor1.get_maas(), doktor2.get_maas(), doktor3.get_maas(), hemsire1.get_maas(), hemsire2.get_maas(), hemsire3.get_maas(), 0, 0, 0],
+        
+        "uzmanlik": [0, 0, doktor1.get_uzmanlik(), doktor2.get_uzmanlik(), doktor3.get_uzmanlik(), 0, 0, 0, 0, 0, 0],
+        
+        "deneyim_yili": [0, 0, doktor1.get_deneyim_yili(), doktor2.get_deneyim_yili(), doktor3.get_deneyim_yili(), 0, 0, 0, 0, 0, 0],
+        
+        "hastane": [0, 0, doktor1.get_hastane(), doktor2.get_hastane(), doktor3.get_hastane(), hemsire1.get_hastane(), hemsire2.get_hastane(), hemsire3.get_hastane(), 0, 0, 0],
+        
+        "calisma_saati": [0, 0, 0, 0, 0, hemsire1.get_calisma_saati(), hemsire2.get_calisma_saati(), hemsire3.get_calisma_saati(), 0, 0, 0],
+        
+        "sertifika": [0, 0, 0, 0, 0, hemsire1.get_sertifika(), hemsire2.get_sertifika(), hemsire3.get_sertifika(), 0, 0, 0],
+        
+        "hasta_no": [0, 0, 0, 0, 0, 0, 0, 0, hasta1.get_hasta_no(), hasta2.get_hasta_no(), hasta3.get_hasta_no()],
+        
+        "dogum_tarihi": [0, 0, 0, 0, 0, 0, 0, 0, hasta1.get_dogum_tarihi(), hasta2.get_dogum_tarihi(), hasta3.get_dogum_tarihi()],
+        
+        "hastalik": [0, 0, 0, 0, 0, 0, 0, 0, hasta1.get_hastalik(), hasta2.get_hastalik(), hasta3.get_hastalik()],
+        
+        "tedavi": [0, 0, 0, 0, 0, 0, 0, 0, hasta1.get_tedavi(), hasta2.get_tedavi(), hasta3.get_tedavi()],
+        
+        "tedavi_suresi": [0, 0, 0, 0, 0, 0, 0, 0, hasta1.get_tedavi_suresi(), hasta2.get_tedavi_suresi(), hasta3.get_tedavi_suresi()]
+    }
+
+    df = pd.DataFrame(data)
+
       
           
