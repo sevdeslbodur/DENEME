@@ -135,4 +135,21 @@ try:
     df = pd.DataFrame(data)
 
       
-          
+    # Eksik değerleri içeren satırları silme
+    df.dropna(inplace=True)
+
+    # DataFrame'de NaN değerlerini kontrol etme
+    nan_values = df.isna().sum().sum()
+
+    if nan_values > 0:
+        print("DataFrame'de NaN değerleri var.")
+    else:
+        print("DataFrame'de NaN değerleri yok.")
+
+    print("DataFrame:")
+    print(df)
+    print("-----------------------------------")
+    
+    # Boş olan değişken değerlerine 0 atama
+    df.fillna(0, inplace=True)
+      
