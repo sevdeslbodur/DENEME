@@ -184,4 +184,12 @@ try:
     print(df_dogum_tarihi_1990_sonrasi)
     print("-----------------------------------")
 
-  
+     
+    # Ad, soyad, departman, maas, uzmanlik, deneyim_yili, hastalik, tedavi bilgilerini içeren yeni bir DataFrame oluşturma
+    yeni_df = df[["ad", "soyad", "departman", "maas", "uzmanlik", "deneyim_yili", "hastalik", "tedavi", "tedavi_suresi"]]
+    print("Yeni DataFrame:")
+    print(yeni_df)
+
+    
+except Exception as e:
+    print(str(e))
