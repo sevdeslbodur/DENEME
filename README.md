@@ -1,2 +1,2 @@
-# saglik-personeli-yonetim-sistemi
- Sağlık personeli yönetim sistemi projesi
+# saglik-personeli-yonetim-sistemi (final projesi)
+
